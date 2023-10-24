@@ -4,6 +4,26 @@
 */
 
 /*
+* Defines a boolean type, this is just an alias for `unsigned char`.
+*/
+typedef unsigned char boolean;
+
+/*
+* Defines a natural type, this is just an alias for `unsigned int`.
+*/
+typedef unsigned int natural;
+
+/*
+* The constant TRUE
+*/
+#define TRUE 1
+
+/*
+* The constant TRUE
+*/
+#define FALSE 0
+
+/*
 * Calculates the fibonacci of a number according to the
 * definition
 * ```
@@ -13,18 +33,18 @@
 * otherwise fibonacci(n - 1) + fibonacci(n - 2)
 * ```
 */
-extern unsigned int fibonacci(const unsigned int n);
+extern natural fibonacci(const natural n);
 
 /*
 * Returns the nth element of the fibonacci sequence
 */
-extern unsigned int fibonacci_nth(const unsigned int nth);
+extern natural fibonacci_nth(const natural nth);
 
 /*
 * Evaluates whether a natural number is a prime number
-* Returns True iff `#(e <- [1..n] | n % e == 0) == 2`
+* Returns TRUE iff `#(e <- [1..n] | n % e == 0) == 2`
 */
-extern unsigned char is_prime(unsigned int n);
+extern boolean is_prime(natural n);
 
 /*
 * Sieve of Eratosthenes
@@ -32,6 +52,4 @@ extern unsigned char is_prime(unsigned int n);
 * is `array[i] is not zero (0) iff i is prime`.
 * Returns the amount of primes found
 */
-extern unsigned int sieve_of_eratosthenes(const unsigned int n, int prime[n + 1]);
-
-// extern ?? min_max(unsigned int size, const int values[size]);
+extern natural sieve_of_eratosthenes(const natural n, boolean prime[n + 1]);
