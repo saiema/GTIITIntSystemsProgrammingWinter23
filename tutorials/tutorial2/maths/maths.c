@@ -7,6 +7,7 @@
 
 void main(void) {
     boolean prime[N + 1];
+    
     int primes_found = sieve_of_eratosthenes(N, prime);
     printf("Primes found %d\n", primes_found);
     for (int p = 2; p <= N; p++) {
