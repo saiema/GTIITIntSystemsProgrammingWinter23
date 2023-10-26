@@ -1,13 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void main(void) {
+int main(void) {
 
-    char *str = "hola mundo";
+    char *str = "Hello World";
     printf("sizeof(str): %ld\n", sizeof(str));
 
-    char hola[5] = {'h', 'o', 'l', 'a', 0};
-    printf("sizeof(hola): %ld\n", sizeof(hola));
-
+    char hello[6] = {'h', 'e', 'l', 'l', 'o', 0};
+    printf("sizeof(hello): %ld\n", sizeof(hello));
 
     int my_array[10] = {1,2,3,4,5,6,7,8,9,10};
 
@@ -24,7 +24,11 @@ void main(void) {
     printf("my_array starts at address: %p\n", my_array);
 
     for (int i = 0; i < 10; i++) {
-        printf("my_address address: %p\t|\taddress of my_address[%d]: %p\t|\tvalue at current address: %d\n", my_array, i, my_array + i, my_array[i]);
+        printf("my_array address: %p\t|",my_array);
+        printf("\taddress of my_array[%d]: %p\t|", i, my_array + i);
+        printf("\tvalue at current address: %d\n", *(my_array + i));
     }
+
+    return 0;
 
 }
