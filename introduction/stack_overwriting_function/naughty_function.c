@@ -1,3 +1,12 @@
+/*
+* An example on why returning the address of a function's local variable should be avoided.
+* use clang to compile this program (as gcc might fix the issue during compilation), and just
+* run this as ./naughty_function
+*
+* Compilation would be: clang -o naughty_function naughty_function.c
+*/
+
+
 #include <stdlib.h>
 #include <stdio.h>
 

@@ -1,3 +1,10 @@
+/*
+* A simple program to show introduce the notion of pointers and data sizes.
+* To compile use: gcc -o addresses_and_values addresses_and_values.c
+* To run use: ./addresses_and_values
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 

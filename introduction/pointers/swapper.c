@@ -1,5 +1,7 @@
 /*
 * A simple program that takes two integers as arguments, and swap them
+* To compile use: gcc -o swapper swapper.c
+* To run use: ./swapper <int> <int>
 */
 
 #include <stdio.h>
