@@ -36,10 +36,7 @@ static struct Student student_new(const char * const name, const char * const su
 }
 
 static void student_add_note(struct Student student, const char * const new_note) {
-    printf("Current: %s\n", student.notes==NULL?"NULL":student.notes);
-    printf("New: %s\n", new_note);
     char * new_notes =  append(student.notes, new_note);
-    printf("Appended: %s\n", new_notes);
     student.notes = new_notes;
 }
 
