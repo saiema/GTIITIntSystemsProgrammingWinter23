@@ -112,10 +112,12 @@ static char * append(const char * const this, const char * const that) {
 }
 
 static char * ncopy(char * const dest, const char * const src, const int size) {
-    int i = 0;
-    while (src[i] != '\0' && i < size) {
+    size_t i;
+    for (i = 0; i < size && src[i] != '\0'; i++) {
         dest[i] = src[i];
-        i++;
+    }
+    for ( ; i < size; i++) {
+        dest[i] = '\0';
     }
     return dest;
 }
