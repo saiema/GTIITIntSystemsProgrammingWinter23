@@ -23,3 +23,20 @@ def maximum_of_ints(int_values: list[int]) -> int:
         current_max = max_int(current_max, e)
     return current_max
 
+
+def reverse(number: int) -> int:
+    """
+    Reverses a number
+    :param number: the number to reverse
+    :return: a reversed version of 'number'
+    """
+    if number == 0:
+        return 0
+    multiplier: int = 1
+    rev: int = 0
+    while number != 0:
+        digit: int = number % 10
+        rev = (rev * 10) + digit
+        number = number // 10
+    return rev
+

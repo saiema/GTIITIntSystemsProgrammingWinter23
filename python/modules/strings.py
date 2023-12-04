@@ -64,3 +64,16 @@ def to_lower_case(string: str) -> str:
         else:
             lower += c
     return lower
+
+
+def reverse(string: str) -> str:
+    """
+    Reverses a string
+    :param string: the string to reverse
+    :return: a reversed version of 'string'
+    """
+    rev: str = ""
+    for c in string:
+        rev = c + rev
+    return rev
+
