@@ -76,4 +76,67 @@ def reverse(string: str) -> str:
     for c in string:
         rev = c + rev
     return rev
+    
+def count_substrings(string: str, substring: str) -> int:
+    """
+    Given a string and a substring, counts the occurences of the second in the first
+    :param string: the string in which to search
+    :param substring: the substring to search
+    :return: How many times 'substring' occurs in 'string'
+    """    
+    if len(substring) == 0:
+        return 1
+    count: int = 0
+    target_index: int = index_of(string, substring)
+    while target_index != -1:
+        count = count + 1
+        string = string[target_index + len(substring)]
+        target_index = index_of(string, substring)
+    return count
+    
+    
+def index_of(string: str, target: str) -> int:
+    assert string is not None
+    assert target is not None
+    if len(target) == 0:
+        return 0
+    if len(string) == 0:
+        return -1
+    if len(target) > len(string):
+        return -1
+    found: bool = False
+    idx: int = 0
+    remaining_length: int = len(string)
+    # My last index would be at len(string) - 1
+    # At the start, the length of available string is len(string) - idx
+    while not found and remaining_length >= len(target):
+        if starts_with(string[idx:], target):
+            found = True
+        else:
+            idx = idx + 1
+            remaining_length = remaining_length - 1
+    if not found:
+        return -1
+    return idx
+    
+def starts_with(string: str, target: str) -> bool:
+    assert string is not None
+    assert target is not None
+    if len(target) == 0:
+        return True
+    if len(string) == 0:
+        return False
+    for i in range(len(target)):
+        if string[i] != target[i]:
+            return False
+    return True
+   
+            
+        
+    
+    
+    
+    
+    
+    
 

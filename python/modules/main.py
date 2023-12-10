@@ -1,7 +1,7 @@
-import strings
 from my_math import maximum_of_ints as maxs
 import my_math
 from List import LinkedList
+import strings
 
 import sys
 
