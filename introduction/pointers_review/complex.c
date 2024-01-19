@@ -6,10 +6,11 @@ struct Complex {
     float imaginary;
 };
 
+typedef struct Complex complex;
 typedef unsigned char boolean;
 
 static struct Complex create_complex(const float real, const float imaginary);
-static char * string_rep_complex(const struct Complex const complex);
+static char * string_rep_complex(const complex const complex_val);
 static boolean equal_complex(const struct Complex const complex_a, const struct Complex const complex_b);
 static struct Complex add_complex(const struct Complex const complex_a, const struct Complex const complex_b);
 static struct Complex subtract_complex(const struct Complex const complex_a, const struct Complex const complex_b);
