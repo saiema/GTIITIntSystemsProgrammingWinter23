@@ -1,5 +1,5 @@
 /*
-* Boolean type and related operations
+* boolean type and related operations
 */
 
 #ifndef BOOLEAN_H
