@@ -1,4 +1,3 @@
-
 def keys(dictionary: list[(str, int)]) -> list[str]:
     """
     Given a list of tuples mapping strings with integers
@@ -6,7 +5,8 @@ def keys(dictionary: list[(str, int)]) -> list[str]:
     :param dictionary: the dictionary over a list of tuples
     :return: all the strings in the dictionary
     """
-    pass
+    return [key for key, _ in dictionary]
+
 
 def values(dictionary: list[(str, int)]) -> list[int]:
     """
@@ -15,7 +15,8 @@ def values(dictionary: list[(str, int)]) -> list[int]:
     :param dictionary: the dictionary over a list of tuples
     :return: all the integers in the dictionary
     """
-    pass
+    return [value for _, value in dictionary]
+
 
 def key_exists(dictionary: list[(str, int)], key: str) -> bool:
     """
@@ -28,7 +29,8 @@ def key_exists(dictionary: list[(str, int)], key: str) -> bool:
     for key_value in dictionary:
         if key_value[0] == key:
             return True
-    return False        
+    return False
+
 
 def get_value(dictionary: list[(str, int)], key: str) -> int | None:
     """
@@ -40,6 +42,7 @@ def get_value(dictionary: list[(str, int)], key: str) -> int | None:
     :return: `value` if there is a tuple `(key, value)` in `dictionary`; `None` otherwise
     """
     pass
+
 
 def set_value(dictionary: list[(str, int)], key: str, value: int) -> int | None:
     """
