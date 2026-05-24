@@ -1,5 +1,6 @@
-from binary_search_tree import BinarySearchTree
-from comparable_int import ComparableInt
+from test.test import Test
+import collections.binary_search_tree.BinarySearchTree as BinarySearchTree
+from comparable.comparable_int import ComparableInt
 from sys import argv
 
 if __name__ == '__main__':

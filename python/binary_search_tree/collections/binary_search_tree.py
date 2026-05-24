@@ -1,4 +1,4 @@
-from comparable import Comparable
+from comparable.comparable import Comparable
 from typing import Union, List
 
 
@@ -213,7 +213,7 @@ class BinarySearchTree:
         elif self.is_leaf():
             return self.__root
         elif self.__right is not None:
-            return self.__right.get_minimum()
+            return self.__right.get_maximum()
         else:
             return self.__root
 

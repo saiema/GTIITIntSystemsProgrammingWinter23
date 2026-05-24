@@ -11,10 +11,10 @@
 int main(void) {
 
     char *str = "Hello World";
-    printf("sizeof(str): %ld\n", sizeof(str));
+    printf("sizeof(str: \"%s\"): %ld\n", str, sizeof(str));
 
     char hello[6] = {'h', 'e', 'l', 'l', 'o', 0};
-    printf("sizeof(hello): %ld\n", sizeof(hello));
+    printf("sizeof(hello: \"%s\"): %ld\n", hello, sizeof(hello));
 
     int my_array[10] = {1,2,3,4,5,6,7,8,9,10};
 

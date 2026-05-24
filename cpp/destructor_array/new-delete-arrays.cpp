@@ -9,6 +9,7 @@ struct my_type {
 int main() {
     my_type v[5];
     my_type* array = new my_type[4];
-    delete array;
+    delete[] array;
+    cout << "delete finished" << endl;
     return 0;
 }

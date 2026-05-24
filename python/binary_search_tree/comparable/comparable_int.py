@@ -1,4 +1,4 @@
-from comparable import Comparable
+from comparable.comparable import Comparable
 
 
 class ComparableInt(Comparable):

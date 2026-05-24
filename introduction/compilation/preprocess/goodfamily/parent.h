@@ -1,6 +1,6 @@
 #ifndef PARENT_H
 #define PARENT_H
 
-#include <grandparent.h>
+#include "grandparent.h"
 
 #endif // PARENT_H
